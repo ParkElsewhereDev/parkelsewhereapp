@@ -1,0 +1,90 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-qrcodejs",
+        "scope": null,
+        "escapedName": "cordova-plugin-qrcodejs",
+        "name": "cordova-plugin-qrcodejs",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/davem/Documents/Ongoing/MMU/SYCPE-PushDemo/code/investigations/SYCPE-QR-Dummy"
+    ]
+  ],
+  "_from": "cordova-plugin-qrcodejs@latest",
+  "_id": "cordova-plugin-qrcodejs@1.0.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-qrcodejs",
+  "_nodeVersion": "6.11.2",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-qrcodejs-1.0.0.tgz_1502921331528_0.04034430137835443"
+  },
+  "_npmUser": {
+    "name": "arcadius",
+    "email": "arcadius@menelic.com"
+  },
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-qrcodejs",
+    "scope": null,
+    "escapedName": "cordova-plugin-qrcodejs",
+    "name": "cordova-plugin-qrcodejs",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-qrcodejs/-/cordova-plugin-qrcodejs-1.0.0.tgz",
+  "_shasum": "0f2a8e78f2278281af5fc9ab3613911edb91c0a8",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-qrcodejs",
+  "_where": "/Users/davem/Documents/Ongoing/MMU/SYCPE-PushDemo/code/investigations/SYCPE-QR-Dummy",
+  "author": {
+    "name": "Menelic Limited"
+  },
+  "bugs": {
+    "url": "https://github.com/MenelicSoftware/cordova-plugin-qrcodejs/issues"
+  },
+  "dependencies": {},
+  "description": "Cordova plugin for generating QR code",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "0f2a8e78f2278281af5fc9ab3613911edb91c0a8",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-qrcodejs/-/cordova-plugin-qrcodejs-1.0.0.tgz"
+  },
+  "gitHead": "799e2f369d76dd0253a90e138d1c196f2db05df0",
+  "homepage": "https://github.com/MenelicSoftware/cordova-plugin-qrcodejs",
+  "keywords": [
+    "QRCodeJS",
+    "plugin",
+    "qr",
+    "qr code"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "arcadius",
+      "email": "arcadius@menelic.com"
+    }
+  ],
+  "name": "cordova-plugin-qrcodejs",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MenelicSoftware/cordova-plugin-qrcodejs.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
