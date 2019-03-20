@@ -1,7 +1,0 @@
-#Tue Mar 19 16:19:24 GMT 2019
-base.0=/Users/asaasbaig/Documents/GitHub/SYCPE-PushDemo/code/investigations/SYCPE-Starter/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
-path.1=classes2.dex
-renamed.1=classes2.dex
-path.0=classes.dex
-renamed.0=classes.dex
-base.1=/Users/asaasbaig/Documents/GitHub/SYCPE-PushDemo/code/investigations/SYCPE-Starter/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0

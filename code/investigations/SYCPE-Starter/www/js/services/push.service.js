@@ -1,4 +1,4 @@
-const SERVER_ROOT = "https://rescuestationpush.herokuapp.com:443"; // heroku service hides secret
+var SERVER_ROOT = "https://rescuestationpush.herokuapp.com:443"; // heroku service hides secret
 
 (function() {
 
@@ -22,6 +22,11 @@ const SERVER_ROOT = "https://rescuestationpush.herokuapp.com:443"; // heroku ser
 
     service.subscribeCallbackHandler = undefined;
     service.timeoutMs = undefined;
+
+
+    service.setServerRoot = function(domain){
+      SERVER_ROOT = "https://" + domain + ":443";  
+    }
 
     service.setTimeout = function setTimeout(millis) {
       service.timeoutMs = millis;

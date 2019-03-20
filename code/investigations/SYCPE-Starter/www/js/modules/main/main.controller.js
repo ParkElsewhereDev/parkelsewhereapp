@@ -3,10 +3,12 @@
   'use strict';
 
   var app = angular.module('main' );
-  app.controller('mainCtrl', mainCtrl);
-  mainCtrl.$inject = [ '$scope', 'pushSrvc' ];
 
-  function mainCtrl( $scope, pushSrvc ) {
+  app.controller('mainCtrl', mainCtrl);
+
+  mainCtrl.$inject = [ '$scope', 'pushSrvc', '$http' ];
+
+  function mainCtrl( $scope, pushSrvc, $http ) {
 
     var vm = angular.extend(this, { });
 
@@ -44,16 +46,18 @@
 
     };
 
-    vm.incidents=function()
+    vm.incidents=function(domain, uuid)
     {
-      var urlParams = new URLSearchParams(window.location.search);
-      var uuid=urlParams.get('uuid'); //getus uuid from url
       
       var jsonpayload={
-        "date":Math.floor(new date()/1000), "sticker":uuid,
+        date:Math.floor(new Date().getTime() / 1000), 
+        sticker:uuid
       };
       //Use $http service to send get request to API and execute different functions depending on whether it is successful or not
-      $http.post(vm.endpoint + '/incidents/', jsonpayload).then(
+
+      var endpoint = "https://" + domain; 
+
+      $http.post(endpoint + '/incidents/', jsonpayload).then(
           function success(response) 
           {
               vm.responses = response.data;
@@ -76,10 +80,16 @@
             console.log("Aborted scan!");
             return;
           } else {
-            if(qrResult.format==="URL") {
-                vm.uuid = qrResult.text;
-                vm.incidents();
-                pushSrvc.subscribe( qrResult.text );
+            if(qrResult.format==="QR_CODE") {
+                var content = qrResult.text;
+                var url = new URL(content);
+                var uuid = url.searchParams.get('uuid');
+                var push = url.searchParams.get('push');
+                var park = url.searchParams.get('park');
+                vm.uuid = uuid;
+                vm.incidents(park, uuid);
+                pushSrvc.setServerRoot(push);
+                pushSrvc.subscribe(uuid );
                 vm.subscriptionFeedback = "Subscribed!";
                 $scope.$apply();
             }
@@ -98,8 +108,8 @@
 
     vm.handleInbound = function handleInbound( data ) {
       console.log("Got inbound message", data);
-      console.log("payload", JSON.parse(data.payload.payload));
-      alert(JSON.stringify(data));
+      console.log("payload", JSON.parse(data.payload.message));
+      alert("message received");
     };
 
     vm.initialise();
