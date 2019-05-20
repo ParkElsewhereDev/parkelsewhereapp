@@ -1,16 +1,16 @@
 To install the App, ensure you have Android studio SDK 26, Node.js with NPM installed
 
-Set up Cordova with npm install -g cordova
-Set up Ionic with npm install -g ionic@3.20.0
+Set up Cordova with `npm install -g cordova`
+Set up Ionic with `npm install -g ionic@3.20.0`
 (Based on project with 3.20.0 version, best to use same version)
 
 
 use 
-ionic cordova build android
+`ionic cordova build android`
 at top of project (where config.xml is available)
 
 once project is built:
-cordova run android --device
+`cordova run android --device`
 to deploy to device
 
 
